@@ -90,7 +90,7 @@ udp and ip.addr == <target_ip>
 
 ### Xmas Scan
 
-The Xmas scan sends various flags – FIN, URG, and PUSH – with the intent to create an illogical interaction. The sender then analyzes the system’s response so it can find out more about the system’s ports and firewall. give me nmap code for these
+The Xmas scan sends various flags – FIN, URG, and PUSH – with the intent to create an illogical interaction. The sender then analyzes the system’s response so it can find out more about the system’s ports and firewall. 
 
 **Nmap Command:**
 ```bash
