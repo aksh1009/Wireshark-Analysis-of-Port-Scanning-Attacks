@@ -48,14 +48,14 @@ This one is also called an SYN scan. It sends an SYN and waits for the target to
 
 **Nmap Command:**
 ```bash
-tcp.flags.syn==1 and tcp.flags.ack==0 and tcp.window_size<=1024
+nmap -sS <target>
 ```
 
 ![WhatsApp Image 2023-12-28 at 01 01 32_abe44d37](https://github.com/aksh1009/Wireshark-Analysis-of-Port-Scanning-Attacks/assets/143216212/f43cc913-0c7b-4c6f-9c6b-93463d01e0a2)
 
 **Wireshark Filter**
 ```bash
-udp and ip.addr == <target_ip> 
+tcp.flags.syn==1 and tcp.flags.ack==0 and tcp.window_size<=1024
 ```
 
 
@@ -94,14 +94,14 @@ The Xmas scan sends various flags – FIN, URG, and PUSH – with the intent to 
 
 **Nmap Command:**
 ```bash
-tcp.flags.fin==1 && tcp.flags.push==1 && tcp.flags.urg==1
+nmap -sX <target>
 ```
 
 ![WhatsApp Image 2023-12-28 at 01 34 36_0b1b327a](https://github.com/aksh1009/Wireshark-Analysis-of-Port-Scanning-Attacks/assets/143216212/4d8ee05d-1d56-4c93-8090-2991d5889d1d)
 
 **Wireshark Filter**
 ```bash
-udp and ip.addr == <target_ip> 
+tcp.flags.fin==1 && tcp.flags.push==1 && tcp.flags.urg==1
 ```
 
 
